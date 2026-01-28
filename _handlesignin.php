@@ -16,14 +16,14 @@
         if($numRow > 0)
         {
             $showerror = "Email is already exists.";
-            header("location: http://localhost/unit1/Project/signup.php");
+            header("Location: signup.php");
         }
         else 
         {
             if($pass != $cpass)
             {
                 $showerror = "Password do not match";
-                header("location: http://localhost/unit1/Project/signup.php");
+                header("Location: signup.php");
             }
             else
             {
@@ -33,7 +33,7 @@
                 if($result)
                 {
                     $showalert = true;
-                    header("location: http://localhost/unit1/Project/login.php");
+                    header("Location: login.php");
                     exit();
                 }
             }

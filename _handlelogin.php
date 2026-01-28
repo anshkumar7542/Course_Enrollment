@@ -22,19 +22,19 @@
                 $_SESSION['loggedin'] = true;
                 $_SESSION['useremail'] = $email;
                 
-                header("location:http://localhost/unit1/Project/index.php");
+                header("Location: index.php");
                 exit();
             }
             else
             {
                 $showerror = "Invalid Credentails";
-                header("location:http://localhost/unit1/Project/login.php");
+                header("Location: login.php");
             }
         }
         else 
         {
             $showerror = "User credentials is not valid";
-            header("location:http://localhost/unit1/Project/login.php");
+            header("Location: login.php");
         }
     }
 ?>

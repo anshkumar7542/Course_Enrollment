@@ -11,10 +11,10 @@
 
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password_db = ""; 
-$database = "login"; 
+$servername = getenv("DB_HOST") ?: "localhost";
+$username = getenv("DB_USER") ?: "root";
+$password_db = getenv("DB_PASS") ?: ""; 
+$database = getenv("DB_NAME_LOGIN") ?: "login"; 
 
 $conn = new mysqli($servername, $username, $password_db, $database);
 

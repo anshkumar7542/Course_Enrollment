@@ -32,7 +32,7 @@
                             style="padding-bottom: 15px;font-size: 16px;font-weight: lighter;">or
                             use email password</p>
                         <div style="height: 50%;">
-                            <form action="/UNIT1/Project/_handlesignin.php" method="POST">
+                            <form action="_handlesignin.php" method="POST">
                                 <input type="email" placeholder="Email"
                                     name="email" required
                                     style="height: 30px; background-color: #f9f7f7; margin-bottom:10px; border-radius: 5px; border: none; outline: none; padding: 4px 0px 4px 10px">
@@ -54,7 +54,7 @@
                 <div class="H2">
                     <h1 style="margin-top: 175px; font-size: 30px;">Hello, User!</h1>
                     <p style="font-size: 16px; padding-top: 12px;">you don't have an account</p>
-                    <div class="btn1"><a href="http://localhost/unit1/Project/Login.php" style="text-decoration: none; color:white;">Login</a></div>
+                    <div class="btn1"><a href="login.php" style="text-decoration: none; color:white;">Login</a></div>
                 </div>
             </div>
         </div>

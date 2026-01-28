@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="timetable/style2.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -75,12 +75,12 @@
                             <input type="file" id="fileInput" accept="image/*">
                         </div>
                         <div style="margin-left:0px"><p>Welcome <b>'.$_SESSION['useremail'].'</b> </p></div>
-                        <div class="logout" style="width:122px; margin-right:15px; background-color:white;border:2px solid red;"><a href="http://localhost/unit1/Project/logout.php"  style="text-decoration:none; background-color:white;">Logout</a></div>';
+                        <div class="logout" style="width:122px; margin-right:15px; background-color:white;border:2px solid red;"><a href="logout.php"  style="text-decoration:none; background-color:white;">Logout</a></div>';
                     }
                     else
                     {
-                        echo '<div class="login" style="width:122px;background-color:#cdcaca; margin-right:20px;"><a href="http://localhost/unit1/Project/login.php" style="text-decoration:none; background-color:#cdcaca">Login</a></div>
-                        <div class="signup" style="width:122px;background-color:#cdcaca"><a href="http://localhost/unit1/Project/signup.php"  style="text-decoration:none; background-color:#cdcaca">Sign-up</a></div>';
+                        echo '<div class="login" style="width:122px;background-color:#cdcaca; margin-right:20px;"><a href="login.php" style="text-decoration:none; background-color:#cdcaca">Login</a></div>
+                        <div class="signup" style="width:122px;background-color:#cdcaca"><a href="signup.php"  style="text-decoration:none; background-color:#cdcaca">Sign-up</a></div>';
                     }
                 ?>
         </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="common">
                     <i class="fa-sharp fa-solid fa-file-lines"></i>
-                    <a href="http://localhost/unit1/Project/Quiz.php">Exam</a>
+                    <a href="Quiz.php">Exam</a>
                 </div>
                 <div class="common">
                     <i class="fa-solid fa-square-poll-vertical"></i>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="common">
                     <i class="fa-solid fa-play"></i>
-                    <a href="http://localhost/unit1/cwh/Lecture_32/">Add
+                    <a href="Note.php">Add
                         Note</a>
                 </div>
             </div>

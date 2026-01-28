@@ -3,10 +3,10 @@
     $update = false;
     $delete = false;
   // Connecting to Database -----------------------------------------------------------------------------------------------------------
-    $servername = "localhost";
-    $username = "root";
-    $pass = "";
-    $DATABASE = "notes";
+    $servername = getenv("DB_HOST") ?: "localhost";
+    $username = getenv("DB_USER") ?: "root";
+    $pass = getenv("DB_PASS") ?: "";
+    $DATABASE = getenv("DB_NAME_NOTES") ?: "notes";
     $conn = mysqli_connect($servername,$username,$pass,$DATABASE);
 
   
@@ -83,7 +83,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/unit1/cwh/Lecture_32/index.php" method="POST">
+            <form action="Note.php" method="POST">
               <input type="hidden" name="snoEdit" id="snoEdit">
               <div class="mb-3">
                 <label for="titleEdit" class="form-label">Note Title</label>
@@ -165,7 +165,7 @@
 
     <div class="container my-3">
         <h2>Add a Note</h2>
-        <form action="/unit1/cwh/Lecture_32/index.php" method="POST">
+        <form action="Note.php" method="POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Note-Title</label>
               <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
@@ -251,7 +251,7 @@
           if(confirm("Are You sure? Do you want to delete?!"))
           {
             console.log("Yes");
-            window.location = `/unit1/cwh/Lecture_32/index.php?delete=${sno}`;;
+            window.location = `Note.php?delete=${sno}`;
           }
           else
           {

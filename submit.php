@@ -7,7 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $course = $_POST['course'] ?? '';
 
     // DB connection
-    $conn = new mysqli("localhost", "root", "", "courses_db");
+    $dbHost = getenv("DB_HOST") ?: "localhost";
+    $dbUser = getenv("DB_USER") ?: "root";
+    $dbPass = getenv("DB_PASS") ?: "";
+    $dbName = getenv("DB_NAME_COURSES") ?: "courses_db";
+    $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
     if ($conn->connect_error) {
         echo json_encode(["status" => "error", "message" => "DB connection failed"]);
